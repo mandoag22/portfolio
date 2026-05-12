@@ -29,7 +29,8 @@ export default function Blogs() {
             key={index}
             className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
             variants={fadeInUp}
-            {...cardHoverSmall}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring" as const, stiffness: 300 }}
           >
             <div className="p-6">
               <motion.h2 

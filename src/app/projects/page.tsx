@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import { projects } from '@/contents/projects'
-import Image from 'next/image'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-import { motion } from 'framer-motion'
-import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations'
+import { projects } from "@/contents/projects";
+import Image from "next/image";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "@/utils/animations";
 
 export default function Projects() {
   return (
     <div className="container max-w-7xl mx-auto py-12">
-      <motion.h1 
+      <motion.h1
         className="text-4xl font-bold mb-4 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -17,16 +17,17 @@ export default function Projects() {
       >
         My Projects
       </motion.h1>
-      <motion.p 
+      <motion.p
         className="text-lg text-secondary mb-24 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        Here are some of my recent projects. Click on the links to view the code or live demo.
+        Here are some of my recent projects. Click on the links to view the code
+        or live demo.
       </motion.p>
-      
-      <motion.div 
+
+      <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8"
         variants={staggerContainer}
         initial="initial"
@@ -34,12 +35,13 @@ export default function Projects() {
       >
         {projects.map((project, index) => (
           <motion.div
-            key={index}
+            key={project.title}
             className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
             variants={fadeInUp}
-            {...cardHoverSmall}
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
-            <motion.div 
+            <motion.div
               className="aspect-video bg-gray-200 dark:bg-gray-800"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -52,16 +54,16 @@ export default function Projects() {
                 height={500}
               />
             </motion.div>
-            
+
             <div className="p-6">
-              <motion.h3 
+              <motion.h3
                 className="text-xl font-semibold mb-2"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 {project.title}
               </motion.h3>
-              <motion.p 
+              <motion.p
                 className="text-secondary mb-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -69,8 +71,8 @@ export default function Projects() {
               >
                 {project.description}
               </motion.p>
-              
-              <motion.div 
+
+              <motion.div
                 className="flex flex-wrap gap-2 mb-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -87,8 +89,8 @@ export default function Projects() {
                   </motion.span>
                 ))}
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="flex gap-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -122,5 +124,5 @@ export default function Projects() {
         ))}
       </motion.div>
     </div>
-  )
-} 
+  );
+}
