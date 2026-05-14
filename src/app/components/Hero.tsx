@@ -19,8 +19,8 @@ export default function Hero() {
             <Image
               src="/IMG_PROFILE.PNG"
               alt="Profile"
-              width={60}
-              height={60}
+              width={90}
+              height={90}
               className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary"
             />
           </motion.div>

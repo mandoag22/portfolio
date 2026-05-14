@@ -25,21 +25,20 @@ export default function Blogs() {
         >
           {blogs.map((blog) => (
             <motion.article
-            key={blog.slug}
+              key={blog.slug}
               className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
               variants={fadeInUp}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring" as const, stiffness: 300 }}
             >
-              <Link href={`/blogs/${blog.slug}`}>
-                <motion.h3
-                  className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {blog.title}
-                </motion.h3>
-              </Link>
+              <motion.h3
+                className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                {blog.title}
+              </motion.h3>
+
               <motion.p
                 className="text-gray-600 dark:text-gray-300 mb-4"
                 initial={{ opacity: 0 }}
