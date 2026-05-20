@@ -30,7 +30,7 @@ export const projects: Project[] = [
     description:
       "My personal portfolio website showcasing my projects and skills.",
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    githubLink: "https://github.com",
+    githubLink: "https://github.com/mandoag22/portfolio",
     demoLink: "https://demo.com",
     image: "/projects/mando-website.png",
   },
