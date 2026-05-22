@@ -57,7 +57,7 @@ export default function About() {
               <li>Javascript</li>
               <li>Tailwind CSS</li>
               <li>HTML5 / CSS3</li>
-              <li>UX/UI Design</li>
+              
             </ul>
           </motion.div>
 
@@ -91,7 +91,7 @@ export default function About() {
               <li>Docker</li>
               <li>AWS</li>
               <li>CI/CD</li>
-              <li>Figma</li>
+              
             </ul>
           </motion.div>
         </motion.div>
